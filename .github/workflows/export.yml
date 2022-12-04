@@ -14,18 +14,18 @@ on: # when it is triggered
       - "export_presets.cfg" # the export template
 
 jobs: # the things to do
-  export: # a thing to do
-    uses: testacc-art/godot-actions/.github/workflows/callable-export.yml@test
-    with: # variables
-      godot-version: 4.0.beta # the godot version
-      image: ghcr.io/bend-n/godot-2d:4.0.beta # the container to use
-      export-name: "hammer space" # the name of the exec. ($export-name.exe)
-      platforms: "windows linux web mac" # space seperated list of platforms to build
-      project-root-path: "." # the directory that project.godot is in
-      github-pages: "no" # to deploy to github pages or not (anything besides 'true' == false)
-      itch-path: "bendn/hammers" # required for itch.io deployment.
-    secrets: # secrets
-      butler-api-key: ${{ secrets.BUTLER_CREDENTIALS }} # required for itch.io deployment
+#   export: # a thing to do
+#     uses: testacc-art/godot-actions/.github/workflows/callable-export.yml@test
+#     with: # variables
+#       godot-version: 4.0.beta # the godot version
+#       image: ghcr.io/bend-n/godot-2d:4.0.beta # the container to use
+#       export-name: "hammer space" # the name of the exec. ($export-name.exe)
+#       platforms: "windows linux web mac" # space seperated list of platforms to build
+#       project-root-path: "." # the directory that project.godot is in
+#       github-pages: "no" # to deploy to github pages or not (anything besides 'true' == false)
+#       itch-path: "bendn/hammers" # required for itch.io deployment.
+#     secrets: # secrets
+#       butler-api-key: ${{ secrets.BUTLER_CREDENTIALS }} # required for itch.io deployment
   linux:
     runs-on: ubuntu-20.04
     container:
